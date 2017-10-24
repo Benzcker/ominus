@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ominus</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+			background-color: #424242;
+			color: #fff;
+		}
+		canvas{
+			border: solid .2em #fff;
+			height: 80vh;
+		}
+		button{
+			width: 200px;
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="ominus" width="800" height="600"></canvas><br />
+
+	<button onclick="start()">Starte Neue Simulation</button><br /><br />
+	
+	<label for="pause">Pause:</label>
+	<input type="checkbox" id="pause" value="false" onclick="togglePause()" style="width:20px; height:20px;"><br>
+
+	<label for="nationCount">Nationen:</label>
+	<input id="nationCount" type="range" min="2" max="30" value="20"/>
+	<span id="nationCountDisplay"></span><br />
+
+	<label for="continentWidth">Breite des Kontinents:</label>
+	<input id="continentWidth" type="range" min="10" max="500" value="200"/>
+	<span id="continentWidthDisplay"></span><br />
+
+	<label for="continentHeight">H&ouml;he des Kontinents:</label>
+	<input id="continentHeight" type="range" min="10" max="500" value="150"/>
+	<span id="continentHeightDisplay"></span><br />
+
+	<label for="scale">Zoom:</label>
+	<input id="scale" type="range" min="4" max="100" value="4"/>
+	<span id="scaleDisplay"></span><br />
+
+	<label for="speed">Geschwindigkeit:</label>
+	<input id="speed" type="range" min="1" max="50" value="1"/>
+	<span id="speedDisplay"></span><br />
+
+</body>
+
+<script type="text/javascript" src="input.js"></script>
+<script type="text/javascript" src="canvas.js"></script>
+<script type="text/javascript" src="continent.js"></script>
+<script type="text/javascript" src="cell.js"></script>
+<script type="text/javascript" src="nation.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>
